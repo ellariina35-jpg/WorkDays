@@ -16,22 +16,23 @@ private async void OnBookShiftClicked(object sender, EventArgs e)
     {
         DateTime chosenDate = ShiftDatePicker.Date;
         string email = "your_shared_group@gmail.com"; // Provide target email here
-        
+
         BookShiftOnAndroidDevice(email, chosenDate);
-        
+
         await DisplayAlert("Success", $"Shift booked for {chosenDate.ToShortDateString()}", "OK");
     }
+}
 
-        private void OnCounterClicked(object? sender, EventArgs e)
-        {
-            count++;
+private void OnCounterClicked(object? sender, EventArgs e)
+{
+    count++;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+    if (count == 1)
+        CounterBtn.Text = $"Clicked {count} time";
+    else
+        CounterBtn.Text = $"Clicked {count} times";
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
+    SemanticScreenReader.Announce(CounterBtn.Text);
+}
     }
 }

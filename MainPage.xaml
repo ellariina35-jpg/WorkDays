@@ -1,20 +1,27 @@
 
-<VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkDays.MainPage">
 
-    <Label Text="Work Shift Booking Tool" 
-           FontSize="24" 
-           HorizontalOptions="Center" />
+    <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
 
-    <!-- Date Selection Input -->
-    <DatePicker x:Name="ShiftDatePicker" 
-                Format="D" 
-                MinimumDate="2026-01-01" />
+        <Label Text="Work Shift Booking Tool" 
+               FontSize="24" 
+               HorizontalOptions="Center" />
 
-    <!-- Execution Trigger -->
-    <Button x:Name="BookShiftButton"
-            Text="Book Shift to Shared Calendar"
-            Clicked="OnBookShiftClicked"
-            BackgroundColor="#512BD4"
-            TextColor="White" />
+        <!-- Date Selection Input -->
+        <DatePicker x:Name="ShiftDatePicker" 
+                    Format="D" 
+                    MinimumDate="2026-01-01" />
 
-</VerticalStackLayout>
+        <!-- Execution Trigger -->
+        <Button x:Name="BookShiftButton"
+                Text="Book Shift to Shared Calendar"
+                Clicked="OnBookShiftClicked"
+                BackgroundColor="#512BD4"
+                TextColor="White" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
