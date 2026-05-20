@@ -3,24 +3,58 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WorkDays.MainPage">
 
-    <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
 
-        <Label Text="Work Shift Booking Tool" 
-               FontSize="24" 
-               HorizontalOptions="Center" />
+            <Label Text="Work Shift Booking Tool" 
+                   FontSize="24" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
 
-        <!-- Date Selection Input -->
-        <DatePicker x:Name="ShiftDatePicker" 
-                    Format="D" 
-                    MinimumDate="2026-01-01" />
+            <!-- Date Selection -->
+            <Label Text="Select Date" 
+                   FontSize="16" 
+                   FontAttributes="Bold" />
+            <DatePicker x:Name="ShiftDatePicker" 
+                        Format="D" 
+                        MinimumDate="2026-01-01" />
 
-        <!-- Execution Trigger -->
-        <Button x:Name="BookShiftButton"
-                Text="Book Shift to Shared Calendar"
-                Clicked="OnBookShiftClicked"
-                BackgroundColor="#512BD4"
-                TextColor="White" />
+            <!-- Start Time Selection -->
+            <Label Text="Start Time (08:00 - 21:00)" 
+                   FontSize="16" 
+                   FontAttributes="Bold" />
+            <Picker x:Name="StartTimePicker" 
+                    Title="Select start time" />
 
-    </VerticalStackLayout>
+            <!-- End Time Selection -->
+            <Label Text="End Time" 
+                   FontSize="16" 
+                   FontAttributes="Bold" />
+            <Picker x:Name="EndTimePicker" 
+                    Title="Select end time" />
+
+            <!-- Calendar Selection -->
+            <Label Text="Select Calendar" 
+                   FontSize="16" 
+                   FontAttributes="Bold" />
+            <Picker x:Name="CalendarPicker" 
+                    Title="Select calendar" />
+
+            <Entry x:Name="CalendarEmailEntry"
+                   Placeholder="Or enter calendar email"
+                   Keyboard="Email"
+                   Margin="0,10,0,0" />
+
+            <!-- Booking Button -->
+            <Button x:Name="BookShiftButton"
+                    Text="Book Shift"
+                    Clicked="OnBookShiftClicked"
+                    BackgroundColor="#512BD4"
+                    TextColor="White"
+                    Margin="0,20,0,0"
+                    Padding="20" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>
