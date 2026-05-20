@@ -1,4 +1,4 @@
-﻿namespace WorkDays
+namespace WorkDays
 {
     public class CalendarInfo
     {
