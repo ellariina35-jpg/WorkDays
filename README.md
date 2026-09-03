@@ -26,24 +26,6 @@ WorkDays is a project designed to help users organize, track, and manage their w
 - .NET Framework (version as specified in project configuration)
 - Visual Studio or compatible C# IDE
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ellariina35-jpg/WorkDays.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd WorkDays
-   ```
-
-3. Build the project:
-   ```bash
-   dotnet build
-   ```
-
-4. Deploy to your Android 11+ device or emulator
 
 ## Usage
 
@@ -55,9 +37,6 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
 ## License
 
-[Add your license information here]
-
-## Support
 
 For issues, questions, or suggestions, please open an issue on the [GitHub repository](https://github.com/ellariina35-jpg/WorkDays/issues).
 
